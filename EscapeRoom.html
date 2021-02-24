@@ -1,0 +1,675 @@
+<!-- My scene -->
+	<canvas id="scene"></canvas>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.js
+"></script>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>-->
+<script src= "three.js-dev\build\three.min.js"></script>
+<script src= "three.js-dev/examples/js/controls/OrbitControls.js"></script>
+<script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+<script src= "timer.js"></script>
+<script src= "tween.js"></script>
+<link href="style.css" rel="stylesheet" >
+<script src= "three.js-dev\examples\jsm\loaders\GLTFLoader.js" ></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+<script src="three.js-dev\examples\jsm\loaders\FBXLoader.js"></script>
+ <body>
+         <div class="container">
+  <!-- Trigger the modal with a button -->
+<!--  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myMirror">Open Modal</button>-->
+             <rect id="mirrorpuzzle" x="2.5" y="88.5" width="16" height="14" />
+
+  <!-- Modal -->
+  <div class="modal fade" id="myMirror" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h1 class="modal-title">Mirror Mirror! on the wall</h1>
+        </div>
+        <div class="modal-body">
+<!--          <p>Some text in the modal.</p>-->
+            
+                        <img src="noteMirror.jpg" /> 
+            <label for="answer">There is a note on the back of the mirror! The answer to the riddle must lead to a clue..</label>
+                        <input class="form-control" placeholder="Answer"
+                                type="text" id="answer" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+          
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+     <div class="container">
+ 
+  <!-- Trigger the modal with a button -->
+<!--  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myCloset">Open Modal</button>-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myCloset" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Looking for Narnia</h2>
+        </div>
+        <div class="modal-body">
+<!--          <p>Some text in the modal.</p>-->
+            
+                        <img src="padlock.jpg" /> 
+            <label for="answer">The wardrobe is locked! I need a 4-number passcode to open it..the password must have been left in the room somewhere.</label>
+                        <input class="form-control" placeholder="Enter 4 numbers"
+                                type="text" id="answer" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+          
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+     
+     <div class="container">
+  
+  <!-- Trigger the modal with a button -->
+<!--  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myBook" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Books carry secrets too!</h4>
+        </div>
+        <div class="modal-body">
+<!--          <p>Some text in the modal.</p>-->
+            
+                        <img src="alma23.jpg" /> 
+            <label for="answer">The book was must have been left open on this page for a reason, this has to be a clue!</label>
+                       
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+          
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+     
+     <div class="container">
+ 
+  <!-- Trigger the modal with a button -->
+<!--  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myCarpet" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sweeped under the rug</h4>
+        </div>
+        <div class="modal-body">
+<!--          <p>Some text in the modal.</p>-->
+            
+                        <img src="riddle.png" /> 
+            <label for="answer">Organize the letters to get a clue</label>
+                        <input class="form-control" placeholder="Answer"
+                                type="text" id="answer" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+          
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+     
+</body>
+
+<script>
+
+var ww = window.innerWidth,
+	wh = window.innerHeight;
+
+function init(){
+
+	/* WEBGL RENDERER */
+	renderer = new THREE.WebGLRenderer({canvas : document.getElementById('scene')});
+	renderer.setClearColor(0x000000, 1);
+	renderer.setSize(ww,wh);
+	renderer.shadowMapEnabled = true;
+
+	/* SCENE */
+	scene = new THREE.Scene();
+	scene.add(new THREE.AmbientLight(0x101010));
+
+	/* CAMERA */
+	camera = new THREE.PerspectiveCamera(45, ww/wh, 0.1, 100 ); //Vertical View, aspect ratio, Near plane, Far plane
+	camera.position.set(0, 1, 40);
+	scene.add(camera);
+    
+
+
+	/* LIGHT */
+	light = new THREE.DirectionalLight(0xe0e0e0);
+	light.position.set(5,2,5).normalize();// 5 2 5
+	scene.add(light);
+	light.castShadow = true;
+    light.shadowDarkness = 0.5;
+    light.shadowCameraRight = 5;
+    light.shadowCameraLeft = -5;
+    light.shadowCameraTop = 5;
+    light.shadowCameraBottom = -5;
+    light.shadowCameraNear = 2;
+    light.shadowCameraFar = 100;
+
+   control = new THREE.OrbitControls(camera, renderer.domElement);
+   
+	createShapes();
+	
+
+	//Render the scene
+	renderer.render(scene,camera);
+	window.addEventListener("click", click);
+  window.addEventListener("click", touchStarted);
+
+
+
+};
+       var gui = new dat.GUI();
+var obj = {
+  add: function() {
+   $('#myMirror').modal('show');
+  }
+};
+    var obj1 = {
+  add: function() {
+   $('#myCloset').modal('show');
+  }
+};
+     var obj2 = {
+  add: function() {
+   $('#myBook').modal('show');
+  }
+};
+      var obj3 = {
+  add: function() {
+   $('#myCarpet').modal('show');
+  }
+};
+    
+gui.add(obj1, "add").name("Closet");
+gui.add(obj, "add").name("Clock");
+gui.add(obj, "add").name("Mirror");
+    gui.add(obj3, "add").name("Carpet");
+    gui.add(obj2, "add").name("Book");
+    
+function createShapes(){
+
+	items = new THREE.Object3D();
+    doors=new THREE.Object3D();
+
+    //Frame
+	geo = new THREE.BoxGeometry(1.5, 2, 0.2);
+	var frameMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('frame.jpg'), side: THREE.DoubleSide});
+	var frMaterial = new THREE.MeshFaceMaterial(frameMaterials);
+	var frame = new THREE.Mesh(geo, frMaterial);
+    frame.position.set(4, 4, 8.5);
+    items.add(frame);
+	
+    // floor
+    geo = new THREE.PlaneGeometry(20, 50);
+	var floorMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('floor.jpg'), side: THREE.DoubleSide});
+	var fMaterial = new THREE.MeshFaceMaterial(floorMaterials);
+	var floor = new THREE.Mesh(geo, fMaterial);
+    floor.rotation.x = Math.PI/2;
+    floor.position.y = -2;  
+	floor.position.z = 10;
+    floor.receiveShadow = true;
+	scene.add(floor);
+
+	
+	// left wall
+    geo = new THREE.PlaneGeometry(50,20);
+	var wallMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('wall.jpg'), side: THREE.DoubleSide});
+	var material = new THREE.MeshFaceMaterial(wallMaterials);
+	var wall = new THREE.Mesh(geo, material);
+	scene.add(wall);
+    wall.rotation.y = Math.PI/2;
+	wall.position.y = 8;
+    wall.position.x = -10;
+    wall.position.z = 12;
+	
+	// right wall
+    var wall = wall.clone();
+    wall.position.x = 10;
+	scene.add(wall);
+	
+	//Position of Door
+	axis = new THREE.Mesh( new THREE.PlaneGeometry( 4, 6, 0.2 ), new THREE.MeshNormalMaterial() ); 
+    axis.position.set(0.57, 0, 0.1);
+    scene.add( axis );
+	
+	//door
+	geo = new THREE.BoxGeometry(4, 9, 0.2);
+	var doorMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('reddoor.jpg'), side: THREE.DoubleSide});
+	var material = new THREE.MeshFaceMaterial(doorMaterials);
+	var door = new THREE.Mesh(geo, material);
+    door.position.set(-1.05, 2.5, 8);
+    doors.add(door);
+	
+	pivot = new THREE.Group(); 
+    pivot.position.set( 0, 0, 0 );
+    axis.add( pivot );
+    //pivot.add( door );
+    
+    //DOOR IN SECOND ROOM
+    var door=door.clone();
+    door.position.set(-1, 2.5, -13);
+    doors.add(door);
+	
+	// wall with door
+    var doorWall = new THREE.Shape();
+    doorWall.moveTo(  0, 0 );
+    doorWall.lineTo(  23, 0 );
+    doorWall.lineTo( 23, 9 );// 23 3.5
+    doorWall.lineTo( 25, 9 ); //25 3.5
+    doorWall.lineTo( 25, 0);
+    doorWall.lineTo( 50, 0); 
+    doorWall.lineTo(50, 20); 
+    doorWall.lineTo(0,20);
+    doorWall.lineTo(0,0);
+    geo = new THREE.ShapeGeometry(doorWall);
+	var dMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('blackwall.jpg'), side: THREE.DoubleSide});
+	var material = new THREE.MeshFaceMaterial(dMaterials);
+	var dwall = new THREE.Mesh(geo, material);
+	scene.add(dwall);
+    dwall.position.set(-24.5,-2, 8);
+
+    // wall with door in SECOND ROOM
+    var dwall = dwall.clone();
+    dwall.position.set(-24.5,-2,-13);
+    scene.add(dwall);
+	
+	
+	///* Closet */
+	geometryBox = new THREE.BoxGeometry(1,10,10);
+	var boxMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('closet.jpg'), side: THREE.DoubleSide});
+	var material = new THREE.MeshFaceMaterial(boxMaterials);
+	var box = new THREE.Mesh(geometryBox, material);
+    box.rotation.y = 0;
+	box.position.set(-9.5,3,25);
+	items.add(box);
+	
+	
+	/* safe */
+	geo = new THREE.BoxGeometry( 2, 3,3);
+	var planeMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('dresser.png'), side: THREE.DoubleSide});
+	var pMaterial = new THREE.MeshFaceMaterial(planeMaterials);
+	var safe = new THREE.Mesh(geo, pMaterial);
+	safe.position.set(8.5, -0.5, 16);
+	items.add(safe);
+	
+	
+	/* CARPET */
+	geo = new THREE.PlaneGeometry(10, 13);
+	var floorMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('carpet4.jpg'), side: THREE.DoubleSide});
+	var fMaterial = new THREE.MeshFaceMaterial(floorMaterials);
+	var carpet = new THREE.Mesh(geo, fMaterial);
+    carpet.rotation.x = Math.PI/2;
+	carpet.position.set(-0.5,-1.8,22);
+
+    floor.receiveShadow = true;
+	items.add(carpet);
+	
+	
+	/* WINDOW */
+	geometryBox = new THREE.BoxGeometry(0,5,7);
+	var boxMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('windows.png'), side: THREE.DoubleSide});
+	var material = new THREE.MeshFaceMaterial(boxMaterials);
+	var window = new THREE.Mesh(geometryBox, material);
+	items.add(window);
+	window.position.set(9.5,4,25);
+
+	/* MIRROR */
+    var loader = new THREE.TextureLoader();
+    mirror = new THREE.CircleGeometry( 1.5, 10 );
+    var texture = loader.load("mirror.jpg");
+    material = new THREE.MeshLambertMaterial({map: texture});
+    const circle = new THREE.Mesh( mirror, material );
+    circle.position.set(-5, 4.5, 8.5);
+    items.add(circle);
+
+  
+	
+	/* CARPET IN SECOND ROOM */
+	geo = new THREE.PlaneGeometry(8, 12);
+	var floorMaterials = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load('pattern.jpg'), side: THREE.DoubleSide});
+	var fMaterial = new THREE.MeshFaceMaterial(floorMaterials);
+	var carpet = new THREE.Mesh(geo, fMaterial);
+    carpet.rotation.x = Math.PI/2;
+    carpet.position.set(0,-1.8,-4);
+    floor.receiveShadow = true;
+	items.add(carpet);
+	
+
+
+  scene.add(items);
+ scene.add(doors);
+}
+function Armchair()
+{ 
+  const light = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Armchair/scene.gltf', function (gltf)
+  {
+  chair = gltf.scene.children[0];
+  chair.rotation.z = Math.PI/2;
+  chair.position.set(8,1,-6);
+  chair.scale.set(0.05, 0.05, 0.05);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+
+function table()
+{
+  const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+  light.position.set(9, 4, 0);
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Table/scene.gltf', function (gltf)
+  {
+  table = gltf.scene.children[0];
+  table.rotation.z = (90*Math.PI)/180;
+  table.position.set(-8, 0, -5);
+  table.scale.set(4, 2, 2);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function Book()
+{
+  /*const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+  light.position.set(9, 4, 0);
+  scene.add( light );*/
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Book/scene.gltf', function (gltf)
+  {
+  book = gltf.scene.children[0];
+  book.rotation.z = (90*Math.PI)/180;
+  book.rotation.y = (-90*Math.PI)/180;
+  book.position.set(-8, 2, -5);
+  book.scale.set(2, 2, 2);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function Clock()
+{
+  const light = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Clock/scene.gltf', function (gltf)
+  {
+  c = gltf.scene.children[0];
+  /*var mixer = new THREE.AnimationMixer(c);
+  var clips = c.animations;
+  mixer.update( deltaSeconds );*/
+  c.rotation.z = (-90*Math.PI)/180;
+  c.position.set(9,9,-6);
+  c.scale.set(0.07, 0.07, 0.07);
+  /*// Play a specific animation
+   var clip = THREE.AnimationClip.findByName( Clock, '' );
+   var action = mixer.clipAction( clip );
+   clips.play();
+
+// Play all animations
+    clips.forEach( function ( clip ) 
+    {
+    mixer.clipAction( clip ).play();
+    } );*/
+
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function stickyNote()
+{
+  const light = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Sticky Note/scene.gltf', function (gltf)
+  {
+  note = gltf.scene.children[0];
+  note.rotation.z = (90*Math.PI)/180;
+  note.rotation.x = (180*Math.PI)/180;
+  note.position.set(-4.5, 4.5, 8.7);
+  note.scale.set(0.005, 0.005, 0.005);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function Beanbag()
+{
+  const light = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Beanbag/scene.gltf', function (gltf)
+  {
+  b = gltf.scene.children[0];
+  b.rotation.y = (-180*Math.PI)/90;
+  b.position.set(2, -1.5, 25);
+  b.scale.set(4.5, 4.5, 4.5);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function Table2()
+{
+  const light = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('T2/scene.gltf', function (gltf)
+  {
+  t2 = gltf.scene.children[0];
+  t2.rotation.y = (-180*Math.PI)/90;
+  t2.position.set(0,-2,22);
+  t2.scale.set(0.04, 0.04, 0.04);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function player()
+{
+  const light = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+  light.position.set( 0, 1, 0 ); //default; light shining from top
+  light.castShadow = true; // default false
+  scene.add( light );
+
+  loader = new THREE.GLTFLoader();
+  loader.load('Record Player/scene.gltf', function (gltf)
+  {
+  music = gltf.scene.children[0];
+  music.rotation.y = (-180*Math.PI)/90;
+  music.position.set(0,-0.5,22);
+  music.scale.set(0.008, 0.008, 0.008);
+  scene.add(gltf.scene);
+  renderer.render( scene, camera );
+  });
+}
+
+function m()
+{
+  // create an AudioListener and add it to the camera
+const listener = new THREE.AudioListener();
+camera.add( listener );
+
+// create a global audio source
+const sound = new THREE.Audio( listener );
+
+// load a sound and set it as the Audio object's buffer
+const audioLoader = new THREE.AudioLoader();
+audioLoader.load( 'Saw.mp3', function( buffer ) {
+  sound.setBuffer( buffer );
+  sound.setLoop( true );
+  sound.setVolume( 0.05 );
+  sound.play();
+});
+}
+
+function touchStarted() 
+{
+   mouse_IsDown = true;
+    if (Tone.context.state !== 'running') 
+    {
+      Tone.context.resume();
+    }
+}
+
+function animate() 
+  {
+    requestAnimationFrame( animate );
+	pivot.translate.y += 0.1;
+	TWEEN.update();
+    renderer.render( scene, camera ); 
+
+}
+  
+  
+
+function KeyPressed (){
+
+         document.onkeydown = function(e){
+         switch(e.keyCode){
+             case 38:
+                 camera.position.z-=0.3;
+                 break;
+             case 40:
+                 camera.position.z+=0.3;
+                 break;
+             case 39:
+                 camera.rotation.y-=0.02;
+                 break;
+             case 37:
+                 camera.rotation.y+=0.02;
+                 break;
+             
+                }
+
+            }
+
+        }
+
+ 
+ 
+ 
+ function click(e)
+ {
+ 	var selectedObject;
+    mouse = new THREE.Vector2();
+   	mouse.set(
+		2 * (e.clientX / ww) - 1,
+		1 - 2 * (e.clientY / wh )
+	);
+	
+	var raycaster = new THREE.Raycaster(),INTERSECTED;
+	raycaster.setFromCamera(mouse,camera);
+	
+	intersects = raycaster.intersectObjects(items.children);
+
+	/* OPEN-CLOSE DOOR */
+	var dintersects= raycaster.intersectObjects(doors.children);
+  var degToRad = Math.PI / 180;
+  dintersects.forEach(function (clickedObject) {
+    // is door open or closed already?
+    var targetAngle = clickedObject.object.rotation.y === -100 * degToRad ? 0 : -100 * degToRad;
+
+    new TWEEN.Tween(clickedObject.object.rotation).easing(TWEEN.Easing.Circular.Out).to({
+      y: targetAngle
+    }, 500).start();
+  });
+
+    /* SHOW ALERT MESSAGES ON CLICK */
+	if(intersects.length > 0 ){
+	   var target = intersects[0].object;  
+}
+		renderer.render(scene,camera);
+ };
+ 
+  
+
+init();
+animate();
+Armchair();
+Book();
+table();
+Clock();
+stickyNote();
+Beanbag();
+Table2();
+player();
+m();
+touchStarted();
+</script>
+
+<!-- TIMER -->
+ <div id="timeBox">
+        Time: <span id="time">0</span> minutes
+   </div>

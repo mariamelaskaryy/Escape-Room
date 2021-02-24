@@ -1,0 +1,58 @@
+	#timeBox {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+	color:white;
+	float:right;
+}
+
+.function:nth-child(1) .property-name {
+ background-image: url(closetBtn.png);
+  background-repeat: no-repeat;
+  background-position: right;
+ background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 40px auto;
+    background-color: white;
+  color: dimgray;
+}
+
+.function:nth-child(2) .property-name {
+  background-image: url(clockBtn.png);
+  background-repeat: no-repeat;
+  background-position: right;
+ background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 40px auto;
+    background-color: white;
+  color: dimgrey;
+}
+
+.function:nth-child(3) .property-name {
+ background-image: url(mirrorBtn.png);
+  background-repeat: no-repeat;
+  background-position: right;
+ background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 40px auto;
+    background-color: white;
+  color: dimgray;
+}
+    .function:nth-child(4) .property-name {
+  background-image: url(carpetBtn.png);
+  background-repeat: no-repeat;
+  background-position: right;
+ background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 40px auto;
+    background-color: white;
+  color: dimgray;
+}
+    .function:nth-child(5) .property-name {
+ background-image: url(bookBtn.png);
+  background-repeat: no-repeat;
+  background-position: right;
+ background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 40px auto;
+    background-color: white;
+  color: dimgrey;
+}

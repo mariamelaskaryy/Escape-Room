@@ -1,0 +1,11 @@
+Model Information:
+* title:	Armchair with coffee table
+* source:	https://sketchfab.com/3d-models/armchair-with-coffee-table-49dd91ac22c84284bf6a01e3118df0b4
+* author:	Kaway (https://sketchfab.com/Kaway_0ne)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Armchair with coffee table" (https://sketchfab.com/3d-models/armchair-with-coffee-table-49dd91ac22c84284bf6a01e3118df0b4) by Kaway (https://sketchfab.com/Kaway_0ne) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
